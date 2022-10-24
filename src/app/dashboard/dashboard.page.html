@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="medium">
+     <ion-buttons slot="start" >
+    <ion-icon name="menu" size="large" (click)="menuToggle()" style="cursor: pointer;"></ion-icon>
+  </ion-buttons>
+    <ion-title style="text-align: center;">Personajes</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+ <app-menu id="main-content" ></app-menu>
+  <app-list-usuarios></app-list-usuarios>
+<app-footer></app-footer>
+</ion-content>

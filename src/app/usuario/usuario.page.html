@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title style="text-align: center;">Detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+  <ion-row>
+    <ion-col size="12" *ngIf="usuario$ |async as usuario">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{usuario.name}}</ion-card-title>
+          <ion-card-subtitle>{{usuario.status}}</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p>{{usuario.gender}}</p>
+          <img src={{usuario.image}} width="100%" alt="" >
+          <p>{{usuario.origin.name}}</p>
+            <ion-button style="display: flex;" routerLink="/dashboard">Volver</ion-button>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</div>
+
+<app-footer></app-footer>
+</ion-content>
